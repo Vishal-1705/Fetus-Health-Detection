@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Fetal Health Detection</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+ </head>
+ <body>
+    <h1>Fetal Health Detection:</h1>
+   <form method="POST" action="{{ url_for('predict') }}" id="form-background">
+    <ul>
+        <li class="u">
+            <label for="first">Baseline Fetal Heart Rate:</label>
+            <input type="text" id="first" name="fhr"/>
+        </li>
+        <li class="u">
+            <label for="second">No. of Accelerations per second:</label>
+            <input id="second" name="accelerations"/>     
+        </li>
+        <li class="u">
+            <label for="third">No. of Fetal Movements per second:</label> 
+            <input id="third" name="fetalmovement"/>
+        </li>
+        <li class="u">
+            <label for="fourth">No. of Uterine Contractions per second:</label>
+            <input id="fourth" name="uterinecontractions"/>
+        </li>
+        <li class="u">
+            <label for="fifth">No. of Light Decelerations per second:</label>
+            <input id="fifth" name="lightdecelerations"/>
+        </li>
+        <li class="u">
+            <label for="sixth">No. of Severe Decelerations per second:</label>
+            <input id="sixth" name="severedecelerations"/>
+        </li>
+        <li class="u">
+            <label for="seventh">No. of Prolongued Decelerations per second:</label>
+            <input id="seventh" name="prolongueddecelerations"/>
+        </li>
+        <li class="u">
+            <label for="eigth">Percentage of time with Abnormal Short Term Variability:</label>
+            <input id="eigth" name="abnormalshorttermvariability"/>
+        </li>
+        <li class="u">
+            <label for="nineth">Mean value of Short Term Variability:</label>
+            <input id="nineth" name="meanshorttermvariability"/>
+        </li>
+        <li class="u">
+            <label for="tenth">Percentage of time with Abnormal Long Term Variability:</label>
+            <input id="tenth" name="abnormallongtermvariability"/>
+        </li>
+        <li class="u">
+            <label for="eleventh">Mean value of Long Term Variability:</label>
+            <input id="eleventh" name="meanlongtermvariability"/>
+        </li>
+        <li>
+            <button id="sub" type="submit">Predict</button>
+            <button id="res" type="reset">Reset</button>
+            
+        </li>
+        <li>
+            <h2 id="footer">Your Fetus status is: {{ prediction_text }}</h2>
+        </li>
+    </ul>
+
+    </tr>
+   </form>
+  </table>
+ </body>
+</html>

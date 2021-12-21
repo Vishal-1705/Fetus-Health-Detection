@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'fetus-health-detection'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FB188E4BEA12427D9BB9D3D21BC4D73A }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_95C3B7DD294C43F9B6DE52CFD5077BBD }}
